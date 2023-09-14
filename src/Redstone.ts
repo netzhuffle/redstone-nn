@@ -1,5 +1,6 @@
 import assert from 'assert';
 
+/** Analog redstone has integer power values from 0 to 15. */
 type RedstonePower =
   | 0
   | 1
@@ -18,6 +19,7 @@ type RedstonePower =
   | 14
   | 15;
 
+/** Analog redstone power. */
 export class Redstone {
   private readonly power: RedstonePower;
 
@@ -25,10 +27,16 @@ export class Redstone {
     this.power = power;
   }
 
+  /** Returns the analog redstone power. */
   getPower(): RedstonePower {
     return this.power;
   }
 
+  /**
+   * Substracts the given redstone power from this redstone power.
+   *
+   * Substracting is simple using a redstone comperator with two inputs set to substraction mode.
+   */
   substract(number: RedstonePower): Redstone {
     assert(number <= this.power);
     const result = this.power - number;
