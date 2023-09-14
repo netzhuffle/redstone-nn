@@ -2,6 +2,9 @@
   "name": "redstone-nn",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "verify-types": "tsc"
+  },
   "devDependencies": {
     "bun-types": "latest"
   },
