@@ -6,7 +6,7 @@
     "lint": "eslint .",
     "format": "prettier . --write",
     "verify-types": "tsc",
-    "checks": "bun run lint && bun run format && bun run verify-types"
+    "checks": "bun run lint && bun run format && bun run verify-types && bun test"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.7.0",
